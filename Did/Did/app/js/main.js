@@ -63,6 +63,32 @@ app.controller('ClientCtrl', function ($scope, $location, $http, $routeParams, $
     }).error(function (data, status, headers, config) {
     });
 
+    $scope.update = function () {
+
+        var id = $scope.client.Id;
+        var client = $scope.client;
+
+        var dataObj = {
+            val: $scope.client
+        };
+
+        var req = {
+            method: 'POST',
+            url: 'http://gdl-l-gummuluri.us.ad.gannett.com/api/clients',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data: dataObj
+        }
+
+        $http(req).success(function (data, status, headers, config) {
+            alert('worked');
+        }).error(function (data, status, headers, config) {
+        });
+    }
+
+
+
     $('html, body').animate({
         scrollTop: $(".header_top").offset().top
     }, 1000);
