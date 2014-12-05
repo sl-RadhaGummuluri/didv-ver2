@@ -133,91 +133,114 @@ app.controller('ClientCtrl', function ($scope, $location, $http, $routeParams, $
 /** 
 * Entry controller  
 */
-app.controller('EntryCtrl',	function ($scope, $location, $http, $routeParams) {
-	$scope.selectedClientValue = "default";
-	$scope.selectPlatformValue = "default";
-	$scope.selectApiVersionValue = "default";
-	$scope.selectCsdNameValue = "default";
-	$scope.selectFeatureValue = "default";
-	$scope.selectYNValue = "default";
+app.controller('EntryCtrl', function ($scope, $location, $http, $routeParams) {
+    $scope.selectedClientValue = "default";
+    $scope.selectPlatformValue = "default";
+    $scope.selectApiVersionValue = "default";
+    $scope.selectCsdNameValue = "default";
+    $scope.selectFeatureValue = "default";
+    $scope.selectYNValue = "default";
 
-	$scope.platform = false;
-	$scope.apiversion = false;
-	$scope.csdname = false;
-	$scope.other = false;
+    $scope.platform = false;
+    $scope.apiversion = false;
+    $scope.csdname = false;
+    $scope.other = false;
 
-	var req = {
-	    method: 'GET',
-	    url: 'http://localhost/api/clients',
-	    headers: {
-	        'Content-Type': 'application/json'
-	    }
-	}
+    var req = {
+        method: 'GET',
+        url: 'http://localhost/api/clients',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
 
-	$http(req).success(function (data, status, headers, config) {
-	    $scope.clients = data;
-	}).error(function (data, status, headers, config) {
-	});
+    $http(req).success(function (data, status, headers, config) {
+        $scope.clients = data;
+    }).error(function (data, status, headers, config) {
+    });
 
 
-	$scope.selectClient = function(){
-	    $scope.selectedvalue = $scope.selectedClientValue;
-	    $location.path('/client/' + $scope.selectedvalue);
-	};
+    $scope.selectClient = function () {
+        $scope.selectedvalue = $scope.selectedClientValue;
+        $location.path('/client/' + $scope.selectedvalue);
+    };
 
-	$scope.selectPlatform = function(){
+    $scope.selectPlatform = function () {
 
-	};
+        $scope.filterClients = [];
+        for (i = 0; i < $scope.clients.length - 1; i++) {
+            var client = $scope.clients[i];
+            if (client.platform == $scope.selectPlatformValue) {
+                $scope.filterClients.push(client);
+            }
+        }
+    };
 
-	$scope.selectApiVersion= function(){
+    $scope.selectApiVersion = function () {
+        $scope.filterClients = [];
+        for (i = 0; i < $scope.clients.length - 1; i++) {
+            var client = $scope.clients[i];
+            if (client.apiversion == $scope.selectApiVersionValue) {
+                $scope.filterClients.push(client);
+            }
+        }
+    };
 
-	};
+    $scope.selectHeaderFooter = function () {
 
-	$scope.selectHeaderFooter= function(){
+    };
 
-	};
+    $scope.selectCsdName = function () {
+        $scope.filterClients = [];
+        for (i = 0; i < $scope.clients.length - 1; i++) {
+            var client = $scope.clients[i];
+            if (client.csd == $scope.selectCsdNameValue) {
+                $scope.filterClients.push(client);
+            }
+        }
+    };
 
-	$scope.selectCsdName= function(){
+    $scope.selectAccountManager = function () {
 
-	};
+    };
 
-	$scope.selectAccountManager= function(){
+    $scope.selectFeature = function () {
+        $scope.filterClients = [];
+        $scope.platform = false;
+        $scope.apiversion = false;
+        $scope.csdname = false;
+        $scope.other = false;
 
-	};
+        if ($scope.selectFeatureValue > 3)
+            $scope.other = true;
+        if ($scope.selectFeatureValue == 1)
+            $scope.apiversion = true;
+        if ($scope.selectFeatureValue == 2)
+            $scope.platform = true;
+        if ($scope.selectFeatureValue == 3)
+            $scope.csdname = true;
+    }
 
-	$scope.selectFeature= function(){
-		$scope.platform = false;
-		$scope.apiversion = false;
-		$scope.csdname = false;
-		$scope.other = false;
+    $scope.selectYN = function () {
 
-		if($scope.selectFeatureValue > 3)
-			$scope.other = true;
-		if($scope.selectFeatureValue ==1)
-			$scope.apiversion =true;
-		if($scope.selectFeatureValue ==2)
-			$scope.platform =true;
-		if($scope.selectFeatureValue ==3)
-			$scope.csdname =true;
-	}
+    }
 
-	$scope.selectYN= function(){
-		
-	}
+    $scope.go = function () {
+        var req = {
+            method: 'GET',
+            url: 'http://localhost/api/clients',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }
 
-	$scope.go = function () {
-	    var req = {
-	        method: 'GET',
-	        url: 'http://localhost/api/clients',
-	        headers: {
-	            'Content-Type': 'application/json'
-	        }
-	    }
+        $http(req).success(function (data, status, headers, config) {
+            var t = data;
+        }).error(function (data, status, headers, config) {
+        });
+    }
 
-	    $http(req).success(function (data, status, headers, config) {
-	        var t = data;
-	    }).error(function (data, status, headers, config) {
-	    });
-	}
-
+    $scope.gotoClient = function (id) {
+        $location.path('/client/' + id);
+    }
 });  

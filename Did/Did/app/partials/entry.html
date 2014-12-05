@@ -50,19 +50,15 @@
 	<p class="formTittle">Platform:</p>
 	<select id="selectPlatform" name="selectPlatform" ng-change="selectPlatform()" ng-model="selectPlatformValue">
 		<option value="default"></option>
-		<option value="1">APIOnly</option>
-		<option value="2">MVC</option> 
-		<option value="3">MVC-Catalog</option> 
-		<option value="4">MVC-Coupon</option> 
-		<option value="5">SC2-Custom</option>
-		<option value="6">SC2-HTML</option>
-		<option value="7">SC4-Flash</option>
-		<option value="8">SC4/SC2</option>
-		<option value="9">SC Standard</option>
-		<option value="10">SmartCatalog (HTML)</option>
-		<option value="11">SmartDeals</option>
+		<option value="API/Content">API/Content</option>
+		<option value="MVC">MVC</option> 
+		<option value="MVC - Catalog">MVC - Catalog</option> 
+		<option value="MVC - Coupon">MVC - Coupon</option> 
+		<option value="SC Standard">SC Standard</option>
+		<option value="SC2">SC2</option>
+		<option value="SmartCatalog-HTML">SmartCatalog-HTML</option>
+		<option value="SmartDeals">SmartDeals</option>
 	</select>
-
 </div>
 
 
@@ -70,10 +66,10 @@
 	<p class="formTittle">Api Version:</p>  
 	<select id="selectApiVersion" name="selectApiVersion" ng-change="selectApiVersion()" ng-model="selectApiVersionValue">
 		<option value="default"></option> 	
-		<option value="1">2013.1</option> 
-		<option value="2">2012.2</option>
-		<option value="3">2012.1</option>
-		<option value="4">scapi</option>
+		<option value="2013.1">2013.1</option> 
+		<option value="2012.2">2012.2</option>
+		<option value="2012.1">2012.1</option>
+		<option value="scapi">scapi</option>
 	</select>
 	
 </div>
@@ -81,10 +77,16 @@
 <div ng-show="csdname" class="form">
 	<p class="formTittle">CSD Name:</p> 
 	<select id="selectCsdName" name="selectCsdName" ng-change="selectCsdName()" ng-model="selectCsdNameValue">
-	  	<option value="default"></option> 	
-	  	<option value="1">Anna Dundun</option> 
-	  	<option value="2">Chris Stone</option>
-		<option value="3">Lance Thomas</option>
+	  	<option value="default"></option>        
+        <option value="Anna Dundon">Anna Dundon</option> 	
+        <option value="Bret Campion">Bret Campion</option> 	
+        <option value="Chris Stone">Chris Stone</option> 	
+	  	<option value="John Gross">John Gross</option>
+		<option value="Lance Thomas">Lance Thomas</option>
+        <option value="Samantha Simmons">Samantha Simmons</option> 
+	  	<option value="Zach Cox">Zach Cox</option>
+
+        
 	</select>
 	
 </div>
@@ -100,13 +102,9 @@
 	<ul class="list">
 
 		<li class="headline">Results</l1>
-		<li>List List List List List List</l1>
-		<li>List List List List List List </l1>
-		<li>List List List List List List </l1>
-		<li>List List List List List List</l1>
-		<li>List List List List List List</l1>
-		<li>List List List List List List</l1>
-		<li>List List List List List List</l1>
+		<li ng-repeat="client in filterClients">
+            <a href ng-click=gotoClient(client.Id)>{{client.client}}</a>
+        </l1>
 
 	</ul>
  </div>
