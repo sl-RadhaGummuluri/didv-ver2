@@ -15,6 +15,7 @@
 		margin-left:0;
 		text-align:center;
 		margin-bottom:10px;
+		margin-top:0;
 }
 .clientLogo {
 		margin:0 auto;
@@ -28,10 +29,16 @@
 	text-overflow:ellipsis;
 	width:90%;
 	white-space:nowrap;
+	display:block;
 }
 .titleContain {
 		margin-bottom:10px;
 		height:auto;
+		font-size: 14px;
+		background:#fff;
+		width:100%;
+		margin:0 auto;
+		padding:20px 0;
 }
 .podContainer {clear: both;
 	position: relative;
@@ -61,11 +68,9 @@
 }
 h4 {font-weight:bold;
 	margin-bottom:3px;
+	margin-top:0;
 }
 .response {width:99%;
-	overflow:hidden;
-	text-overflow:ellipsis;
-
 }
 .anchorContain {margin:10px auto 10px auto;
 	width:1000px;
@@ -97,6 +102,9 @@ width: 10px;
 color: #000;
 right: 40px;
 top: 33px;
+}
+
+.no {color:#ccc;
 }
 
 @media only screen and (max-width : 1024px) {
