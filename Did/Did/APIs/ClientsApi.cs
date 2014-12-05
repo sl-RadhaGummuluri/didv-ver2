@@ -33,7 +33,7 @@ namespace Did.APIs
             MongoServer mongo = MongoServer.Create(connection);
             mongo.Connect();
             var database = mongo.GetDatabase("did");
-            var collection = database.GetCollection<BsonDocument>("clients");
+            var collection = database.GetCollection<BsonDocument>("slclients");
 
             foreach (BsonDocument item in collection.FindAll())
             {

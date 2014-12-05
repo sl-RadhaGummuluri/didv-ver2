@@ -146,6 +146,19 @@ app.controller('EntryCtrl',	function ($scope, $location, $http, $routeParams) {
 	$scope.csdname = false;
 	$scope.other = false;
 
+	var req = {
+	    method: 'GET',
+	    url: 'http://localhost/api/clients',
+	    headers: {
+	        'Content-Type': 'application/json'
+	    }
+	}
+
+	$http(req).success(function (data, status, headers, config) {
+	    $scope.clients = data;
+	}).error(function (data, status, headers, config) {
+	});
+
 
 	$scope.selectClient = function(){
 	    $scope.selectedvalue = $scope.selectedClientValue;

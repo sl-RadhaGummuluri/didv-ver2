@@ -7,7 +7,7 @@
 		
 		<select id="selectClient" name="selectClient" ng-change="selectClient()" ng-model="selectedClientValue">
             <option value="default"></option>
-            <option value="1">Aarons</option> 	  
+<!--            <option value="1">Aarons</option> 	  
             <option value="2">Home Depot SD</option>
             <option value="3">Boscov's</option>
             <option value="4">Staples</option>
@@ -16,7 +16,8 @@
             <option value="7">Michaels Canada</option>
             <option value="8">Michaels</option>
             <option value="9">Dillard's</option> 
-            <option value="10">Walgreens</option>
+            <option value="10">Walgreens</option>-->
+            <option value="{{client.Id}}" ng-repeat="client in clients">{{client.client}}</option>
 		</select>
 	</div>
 </div>
