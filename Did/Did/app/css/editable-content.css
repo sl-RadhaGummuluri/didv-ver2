@@ -46,3 +46,9 @@ position:relative;
 .box:hover .edit, .box2:hover .edit2, .box3:hover .edit3, .box4:hover .edit4, .box5:hover .edit5, .box6:hover .edit6, .box7:hover .edit7, .box8:hover .edit8 {
   opacity: 1;
 }
+
+@media only screen and (max-width : 1024px) {
+    .box .edit, .box2 .edit2, .box3 .edit3, .box4 .edit4, .box5 .edit5, .box6 .edit6, .box7 .edit7, .box8 .edit8 {
+      opacity: 1;
+    }
+}
