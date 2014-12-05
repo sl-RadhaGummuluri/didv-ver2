@@ -120,6 +120,13 @@ app.controller('ClientCtrl', function ($scope, $location, $http, $routeParams, $
         }, 1000);
     });
 
+    $(".jumpToTop").click(function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $(".header_top").offset().top
+        }, 1000);
+    });
+
 });
 
 
