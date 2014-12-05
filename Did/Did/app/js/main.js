@@ -63,6 +63,9 @@ app.controller('ClientCtrl', function ($scope, $location, $http, $routeParams, $
     }).error(function (data, status, headers, config) {
     });
 
+    $('html, body').animate({
+        scrollTop: $(".header_top").offset().top
+    }, 1000);
 
     $("#clientinfo").click(function (e) {
         e.preventDefault();
