@@ -51,7 +51,7 @@ app.controller('ClientCtrl', function ($scope, $location, $http, $routeParams, $
     var id = $routeParams.id;
     var req = {
         method: 'GET',
-        url: 'http://localhost/api/clients',
+        url: 'http://gdl-l-gummuluri.us.ad.gannett.com/api/clients',
         headers: {
             'Content-Type': 'application/json'
         }
@@ -148,7 +148,7 @@ app.controller('EntryCtrl', function ($scope, $location, $http, $routeParams) {
 
     var req = {
         method: 'GET',
-        url: 'http://localhost/api/clients',
+        url: 'http://gdl-l-gummuluri.us.ad.gannett.com/api/clients',
         headers: {
             'Content-Type': 'application/json'
         }
@@ -186,10 +186,6 @@ app.controller('EntryCtrl', function ($scope, $location, $http, $routeParams) {
         }
     };
 
-    $scope.selectHeaderFooter = function () {
-
-    };
-
     $scope.selectCsdName = function () {
         $scope.filterClients = [];
         for (i = 0; i < $scope.clients.length - 1; i++) {
@@ -198,10 +194,6 @@ app.controller('EntryCtrl', function ($scope, $location, $http, $routeParams) {
                 $scope.filterClients.push(client);
             }
         }
-    };
-
-    $scope.selectAccountManager = function () {
-
     };
 
     $scope.selectFeature = function () {
@@ -222,13 +214,24 @@ app.controller('EntryCtrl', function ($scope, $location, $http, $routeParams) {
     }
 
     $scope.selectYN = function () {
+        if ($scope.selectFeatureValue == 11) {
+            $scope.selectYNValue
 
+            $scope.filterClients = [];
+            for (i = 0; i < $scope.clients.length - 1; i++) {
+                var client = $scope.clients[i];
+                if (client.googlemaps == $scope.selectYNValue) {
+                    $scope.filterClients.push(client);
+                }
+            }
+
+        }
     }
 
     $scope.go = function () {
         var req = {
             method: 'GET',
-            url: 'http://localhost/api/clients',
+            url: 'http://gdl-l-gummuluri.us.ad.gannett.com/api/clients',
             headers: {
                 'Content-Type': 'application/json'
             }
