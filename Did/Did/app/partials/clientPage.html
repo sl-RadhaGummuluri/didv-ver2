@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Smart Deals Layout Tool</title>
 <link rel="stylesheet" type="text/css" href="../css/main.css">
-<link rel="stylesheet" type="text/css" href="../css/styles.css">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
 <link rel="stylesheet" type="text/css" href="../css/clientPage.css">
 <link rel="stylesheet" type="text/css" href="../css/editable-content.css">
 </head>
@@ -14,8 +14,8 @@
 
 <div class="container">
 	<div class="titleContain">
-      <h2 class="clientTitle"><a name="toTop" class="jumpTag">Walgreens</a></h2>
-      <img src="http://img.walgreens.com/images/adaptive/share/images/logos/walgreens-logo-desktop.png" class="clientLogo">
+      <h2 class="clientTitle"><a name="toTop" class="jumpTag">{{client.client}}</a></h2>
+      <img src="{{client.clientlogo}}" class="clientLogo">
   	</div>
     <div class="anchorContain">
     	<div class="anchor"><a href="#clientInfo" class="jumpTag">Client Information<a></div>
@@ -35,19 +35,19 @@
         <h3 class="podTitle"><a name="clientInfo" class="jumpTag">Client Information</a></h3>
             <div class="information">
                 <h4>Client Colors:</h4>
-                <div class="response text">blue/white</div>
+                <div class="response text">{{client.clientcolors}}</div>
             </div>
             <div class="information">
                 <h4>Platform:</h4>
-                <div class="response text">MVC</div>
+                <div class="response text">{{client.platform}}</div>
             </div>
             <div class="information">
                 <h4>Retail Segment:</h4>
-                <div class="response text">Food and Drug</div>
+                <div class="response text">{{client.retailsegment}}</div>
             </div>
             <div class="information">
                 <h4>Retail SubSegment:</h4>
-                <div class="response text">Drug</div>
+                <div class="response text">{{client.retailsubsegment}}</div>
             </div>
       </div>
       
@@ -56,23 +56,23 @@
         <h3 class="podTitle"><a name="siteLink" class="jumpTag">Site Links</a></h3>
            <div class="information">
                 <h4>Beta URL</h4>
-                <div class="response text"><a class="ellipsis" target="_blank" href="http://origin-qa01smartcircularmvc.shoplocal.com/CanadianTireSDV2">betascmvc.shoplocal.com/walgreens</a></div>
+                <div class="response text"><a class="ellipsis" target="_blank" href={{client.betaurl}}>{{client.betaurl}}</a></div>
             </div>
             <div class="information">
                 <h4>Primary URL</h4>
-                <div class="response text"><a class="ellipsis" target="_blank" href="http://origin-qa01smartcircularmvc.shoplocal.com/CanadianTireSDV2">http://walgreens.shoplocal.com</a></div>
+                <div class="response text"><a class="ellipsis" target="_blank" href={{client.primaryurl}}>{{client.primaryurl}}</a></div>
             </div>
             <div class="information">
                 <h4>QA URL</h4>
-                <div class="response text"><a class="ellipsis" target="_blank" href="http://origin-qa01smartcircularmvc.shoplocal.com/CanadianTireSDV2">http://origin-qa01smartcircularmvc.shoplocal.com/walgreens</a></div>
+                <div class="response text"><a class="ellipsis" target="_blank" href="{{client.qaurl}}">{{client.qaurl}}</a></div>
             </div>
             <div class="information">
                 <h4>Secondary URL</h4>
-                <div class="response text"><a class="ellipsis" target="_blank" href="http://origin-qa01smartcircularmvc.shoplocal.com/CanadianTireSDV2">http://walgreens2.shoplocal.com</a></div>
+                <div class="response text"><a class="ellipsis" target="_blank" href="{{client.secondaryurl}}">{{client.secondaryurl}}</a></div>
             </div>
             <div class="information">
                 <h4>UAT URL</h4>
-                <div class="response text"><a class="ellipsis" target="_blank" href="http://origin-qa01smartcircularmvc.shoplocal.com/CanadianTireSDV2">http://origin-u01smartcircularmvc.shoplocal.com/walgreens</a></div>
+                <div class="response text"><a class="ellipsis" target="_blank" href="{{client.uaturl}}">{{client.uaturl}}</a></div>
             </div>
       </div>
       
@@ -81,31 +81,31 @@
         <h3 class="podTitle"><a name="apiInfo" class="jumpTag">API/Tracking Information</a></h3>
             <div class="information">
                 <h4>API Version in Use</h4>
-                <div class="response text">2013.1</div>
+                <div class="response text">{{client.apiversion}}</div>
             </div>
             <div class="information">
                 <h4>API Example URL</h4>
-                <div class="response text"><a href="http://api2.shoplocal.com/retail/e4d5e311cadb36cb/2013.1/json/promotionpagelistingsandhotspots?storeid=2424938&promotionid=108911&promotioncode=walgreens-141130&languageid=1&resultset=full&listinglinks=n&sneakpeek=n&reviewsflag=n&heatindex=n&versionflag=y&promotionpageid=4625448" class="ellipsis" target="_blank">http://api2.shoplocal.com/retail/e4d5e311cadb36cb/2013.1/json/promotionpagelistingsandhotspots?storeid=2424938&promotionid=108911&promotioncode=walgreens-141130&languageid=1&resultset=full&listinglinks=n&sneakpeek=n&reviewsflag=n&heatindex=n&versionflag=y&promotionpageid=4625448</a></div>
+                <div class="response text"><a href="{{client.apiurlexample}}" class="ellipsis" target="_blank">{{client.apiurlexample}}</a></div>
             </div>
             <div class="information">
                 <h4>Campaign ID</h4>
-                <div class="response text">e4d5e311cadb36cb</div>
+                <div class="response text">{{client.campaignid}}</div>
             </div>
             <div class="information">
                 <h4>DCSID</h4>
-                <div class="response text">dcsa2zguj10000sh06c3kotu6_9i7y</div>
+                <div class="response text">{{client.dcsid}}</div>
             </div>
             <div class="information">
                 <h4>PRetailerID</h4>
-                <div class="response text">-99389</div>
+                <div class="response text">{{client.pretailerid}}</div>
             </div>
             <div class="information">
                 <h4>RetailerID</h4>
-                <div class="response text">12271</div>
+                <div class="response text">{{client.retailerid}}</div>
             </div>
             <div class="information">
                 <h4>Site ID</h4>
-                <div class="response text">1576</div>
+                <div class="response text">{{client.siteid}}</div>
             </div>
       </div>
       
@@ -114,19 +114,19 @@
         <h3 class="podTitle"><a name="compatibilityInfo" class="jumpTag">Compatibility Information</a></h3>
             <div class="information">
                 <h4>Mobile Optimized</h4>
-                <div class="response text">Yes</div>
+                <div class="response text">{{client.mobileoptimized}}</div>
             </div>
             <div class="information">
                 <h4>Mobile Page Views</h4>
-                <div class="response text">Yes</div>
+                <div class="response text">{{client.mobilepageviews}}</div>
             </div>
             <div class="information">
                 <h4>Supported Browsers</h4>
-                <div class="response text">Latest IE, Firefox, Chrome</div>
+                <div class="response text">{{client.supportedbrowserlist}}</div>
             </div>
             <div class="information">
                 <h4>Tablet Optimized</h4>
-                <div class="response text">Yes</div>
+                <div class="response text">{{client.tabletoptimized}}</div>
             </div>
       </div>
       
@@ -135,52 +135,52 @@
         <h3 class="podTitle"><a name="addOnInfo" class="jumpTag">Site Add-Ons</a></h3>
             <div class="information">
                 <h4>Accessibility</h4>
-                <div class="response text">yes</div>
+                <div class="response text">{{client.accessibility}}</div>
             </div>
             <div class="information">
                 <h4>Accessibility URL</h4>
-                <div class="response text">n/a</div>
+                <div class="response text">{{client.accessibilityurl}}</div>
             </div>
             <div class="information">
                 <h4>Facebook</h4>
-                <div class="response text">yes</div>
+                <div class="response text">{{client.facebooksite}}</div>
             </div>
             <div class="information">
                 <h4>Facebook URL</h4>
-                <div class="response text">n/a</div>
+                <div class="response text">{{client.facebooksiteurl}}</div>
             </div>
             <div class="information">
                 <h4>Facebook Site ID</h4>
-                <div class="response text">1245 (Puerto Rico=1472)</div>
+                <div class="response text">{{client.facebooksiteid}}</div>
             </div>
             <div class="information">
                 <h4>Facebook DCSID</h4>
-                <div class="response text">dcsgpb9wnvz5bdqg9uxrfxipi_4m2d (Puerto Rico=dcsdl4gb100000gcg95s3s3sp_6j5m)</div>
+                <div class="response text">{{client.dcsid}}</div>
             </div>
             <div class="information no">
                 <h4>French</h4>
-                <div class="response text">no</div>
+                <div class="response text">{{client.french}}</div>
             </div>
             <div class="information">
                 <h4>French URL</h4>
-                <div class="response text">n/a</div>
+                <div class="response text">{{client.frenchurl}}</div>
             </div>
             <div class="information">
                 <h4>Sneak Peek</h4>
-                <div class="response text">yes</div>
+                <div class="response text">{{client.sneakpeek}}</div>
             </div>
             <div class="information">
                 <h4>Sneak Peek URL</h4>
-                <div class="response text"><a class="ellipsis" href="http://walgreens2.shoplocal.com/WalgreensSneakPeek/" target="_blank">http://walgreens2.shoplocal.com/WalgreensSneakPeek</a>
+                <div class="response text"><a class="ellipsis" href="{{client.sneakpeek}}" target="_blank">{{client.sneakpeek}}</a>
                 </div>
             </div>
             <div class="information">
                 <h4>Spanish</h4>
-                <div class="response text">no</div>
+                <div class="response text">{{client.spanish}}</div>
             </div>
             <div class="information">
                 <h4>Spanish URL</h4>
-                <div class="response text">n/a</a>
+                <div class="response text">{{client.spanishurl}}</a>
                 </div>
             </div>
       </div>
@@ -190,43 +190,43 @@
         <h3 class="podTitle"><a name="clientFeatures" class="jumpTag">Client Features</a></h3>
             <div class="information">
                 <h4>Add to Cart Integration</h4>
-                <div class="response text">yes</div>
+                <div class="response text">{{client.addtocart}}</div>
             </div>
             <div class="information">
                 <h4>Content Dock</h4>
-                <div class="response text">no</div>
+                <div class="response text">{{client.contentdock}}</div>
             </div>
             <div class="information">
                 <h4>Coupons</h4>
-                <div class="response text">yes</div>
+                <div class="response text">{{client.coupons}}</div>
             </div>
             <div class="information">
                 <h4>Dynamic Pages</h4>
-                <div class="response text">yes</div>
+                <div class="response text">{{client.dynamicpages}}</div>
             </div>
             <div class="information">
                 <h4>Google Maps</h4>
-                <div class="response text">yes</div>
+                <div class="response text">{{client.googlemaps}}</div>
             </div>
             <div class="information">
                 <h4>Header Footer Type</h4>
-                <div class="response text">yes</div>
+                <div class="response text">{{client.headerfooter}}</div>
             </div>
             <div class="information">
                 <h4>Shopping List</h4>
-                <div class="response text">no</div>
+                <div class="response text">{{client.shoppinglist}}</div>
             </div> 
             <div class="information">
                 <h4>Social Sharing</h4>
-                <div class="response text">yes</div>
+                <div class="response text">{{client.socialsharing}}</div>
             </div>
             <div class="information">
                 <h4>Store List NUEP</h4>
-                <div class="response text">no</div>
+                <div class="response text">{{client.storelistnuep}}</div>
             </div>
             <div class="information">
                 <h4>Video Support</h4>
-                <div class="response text">yes</div>
+                <div class="response text">{{client.videosupport}}</div>
             </div>
       </div>
       
@@ -235,15 +235,15 @@
         <h3 class="podTitle"><a name="opInfo" class="jumpTag">Operational Information</a></h3>
             <div class="information">
                 <h4>Account Manager Name</h4>
-                <div class="response text">Chris Stone</div>
+                <div class="response text">{{client.opsam}}</div>
             </div>
             <div class="information">
                 <h4>CSD Name</h4>
-                <div class="response text">Patty Fernandez</div>
+                <div class="response text">{{client.csd}}</div>
             </div>
             <div class="information">
                 <h4>OPS QC Entry Standards Link</h4>
-                <div class="response text"><a class="ellipsis" href="https://wiki.godigitalmarketing.com/display/CONPRO/Walgreen%27s+QC+Standards" class="ellipsis">https://wiki.godigitalmarketing.com/display/CONPRO/Walgreen%27s+QC+Standards</a></div>
+                <div class="response text"><a class="ellipsis" href="{{client.opsqcstandardurl}}" class="ellipsis">{{client.opsqcstandardurl}}</a></div>
             </div>
       </div>
        
@@ -252,25 +252,25 @@
         <h3 class="podTitle"><a name="devInfo" class="jumpTag">Development Information</a></h3>
             <div class="information">
                 <h4>Date of Last Regression Run</h4>
-                <div class="response text">11/19/2014</div>
+                <div class="response text">{{client.lastregressiondate}}</div>
             </div>
             <div class="information">
                 <h4>Last Migrating Story Link (in Rally)</h4>
-                <div class="response text">11/19/2014</div>
+                <div class="response text"><a class="ellipsis" href="{{client.lastmigratingstory}}" class="ellipsis">{{client.lastmigratingstory}}</a></div>
             </div>
             <div class="information">
                 <h4>Last Migrating Package Link to Jira</h4>
-                <div class="response text">11/19/2014</div>
+                <div class="response text"><a class="ellipsis" href="{{client.lastmigratingpackage}}" class="ellipsis">{{client.lastmigratingpackage}}</a></div>
             </div>
             <div class="information">
                 <h4>Regression Script URL</h4>
-                <div class="response text">11/19/2014</div>
+                <div class="response text"><a class="ellipsis" href="{{client.regressionscripturl}}" class="ellipsis">{{client.regressionscripturl}}</a></div>
             </div>
       </div>
       <div class="cb"></div>
   </div>
 </div>
-<script src="../scripts/jquery-2.1.1.min.js"></script>
-<script src="../scripts/editable-content.js"></script>
+<script src="scripts/jquery-2.1.1.min.js"></script>
+<script src="scripts/editable-content.js"></script>
 </body>
 </html>

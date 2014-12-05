@@ -10,7 +10,7 @@ namespace Did.Resources
     public class Client
     {
         [BsonId]
-        public string Id { get; set; }
+        public int Id { get; set; }
         public string client { get; set; }
         public string platform { get; set; }
         public string clientlogo { get; set; }

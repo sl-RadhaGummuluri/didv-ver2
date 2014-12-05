@@ -15,18 +15,10 @@ var app = angular.module('tutorialWebApp', [
  */
 app.config(['$routeProvider', function ($routeProvider) {
   $routeProvider
-    // Home
+    // Entry
     .when("/", {templateUrl: "partials/entry.html", controller: "EntryCtrl"})
-    // Pages
-    .when("/about", {templateUrl: "partials/about.html", controller: "PageCtrl"})
-    .when("/faq", {templateUrl: "partials/faq.html", controller: "PageCtrl"})
-    .when("/pricing", {templateUrl: "partials/pricing.html", controller: "PageCtrl"})
-    .when("/services", {templateUrl: "partials/services.html", controller: "PageCtrl"})
-    .when("/contact", {templateUrl: "partials/contact.html", controller: "PageCtrl"})
-    // Blog
-    .when("/blog", {templateUrl: "partials/blog.html", controller: "BlogCtrl"})
-    .when("/blog/post", {templateUrl: "partials/blog_item.html", controller: "BlogCtrl"})
-    // else 404
+    .when("/client/:id", { templateUrl: "partials/clientPage.html", controller: "ClientCtrl" })
+
     .otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});
 }]);
 
@@ -54,10 +46,30 @@ app.controller('PageCtrl', function (/* $scope, $location, $http */) {
   })
 });
 
+app.controller('ClientCtrl', function ($scope, $location, $http, $routeParams) {
+
+    console.log('in here');
+    var id = $routeParams.id;
+    var req = {
+        method: 'GET',
+        url: 'http://localhost/api/clients',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
+
+    $http(req).success(function (data, status, headers, config) {
+        var t = data;
+        $scope.client = data[id - 1];
+    }).error(function (data, status, headers, config) {
+    });
+});
+
+
 /** 
 * Entry controller  
 */
-app.controller('EntryCtrl',	function ($scope, $location, $http) {
+app.controller('EntryCtrl',	function ($scope, $location, $http, $routeParams) {
 	$scope.selectedClientValue = "default";
 	$scope.selectPlatformValue = "default";
 	$scope.selectApiVersionValue = "default";
@@ -72,21 +84,8 @@ app.controller('EntryCtrl',	function ($scope, $location, $http) {
 
 
 	$scope.selectClient = function(){
-	    $scope.selectedvalue = $scope.selectedChoice;
-
-	    var req = {
-	        method: 'GET',
-	        url: 'http://localhost/api/clients',
-	        headers: {
-	            'Content-Type': 'application/json'
-	        }
-	    }
-
-	    $http(req).success(function (data, status, headers, config) {
-	        var t = data;
-	    }).error(function (data, status, headers, config) {
-	    });
-
+	    $scope.selectedvalue = $scope.selectedClientValue;
+	    $location.path('/client/' + $scope.selectedvalue);
 	};
 
 	$scope.selectPlatform = function(){

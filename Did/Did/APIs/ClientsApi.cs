@@ -38,7 +38,7 @@ namespace Did.APIs
             foreach (BsonDocument item in collection.FindAll())
             {
                 Client client = new Client();
-                client.Id = item.GetElement("_id").Value.ToString();
+                client.Id = Convert.ToInt32(item.GetElement("_id").Value.ToString());
                 client.client = item.GetElement("client").Value.ToString();
                 client.platform = item.GetElement("platform").Value.ToString();
                 client.clientlogo = item.GetElement("clientlogo").Value.ToString();
@@ -98,7 +98,7 @@ namespace Did.APIs
             }
 
             mongo.Disconnect(); 
-            return clients;
+            return clients.OrderBy(x=>x.Id).ToList();
         }
 
     }
