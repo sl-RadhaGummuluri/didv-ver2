@@ -14,6 +14,7 @@
 }
 .backBtn {display:block;
           margin-left:15px;
+          color: #000;
 }
 .backChevron {
     border-style: solid;
@@ -49,7 +50,7 @@
 		float:none;
 		display:block;
 		margin-bottom:5px;
-		height:200px;
+		width:200px;
 }
 .ellipsis {overflow:hidden;
 	text-overflow:ellipsis;
@@ -89,7 +90,6 @@
 	width:80%;
 }
 .information {border-bottom:#cecece solid 1px;
-	border-top:#cecece solid 1px;
 	padding:10px 0;
 	margin-bottom:15px;
 }
@@ -110,7 +110,7 @@ h4 {font-weight:bold;
 	margin:0 5px;
 	text-align:center;
 	margin-bottom:10px;
-}
+}  
 .jumpTag {text-decoration:none;
 color:black;
 }
