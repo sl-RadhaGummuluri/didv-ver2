@@ -16,7 +16,7 @@ body {
 }
 
 .edit, .save {
-  width: 30px;
+  width: 50px;
   display: block;
   position: absolute;
   top: 0px;
