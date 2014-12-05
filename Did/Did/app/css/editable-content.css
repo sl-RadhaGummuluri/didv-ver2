@@ -2,8 +2,8 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.box {
-  
+.box, .box2, .box3, .box4, .box5, .box6, .box7, .box8 {
+position:relative;
 }
 
 .editable {
@@ -15,7 +15,7 @@ body {
   outline: none;
 }
 
-.edit, .save {
+.edit, .save, .edit2, .save2, .edit3, .save3, .edit4, .save4, .edit5, .save5, .edit6, .save6, .edit7, .save7, .edit8, .save8 {
   width: 50px;
   display: block;
   position: absolute;
@@ -30,19 +30,19 @@ body {
   cursor: pointer;
 }
 
-.edit { 
+.edit, .edit2, .edit3, .edit4, .edit5, .edit6, .edit7, .edit8 { 
   background: #557a11;
   color: #f0f0f0;
   opacity: 0;
   transition: opacity .2s ease-in-out;
 }
 
-.save {
+.save, .save2, .save3, .save4, .save5, .save6, .save7, .save8 {
   display: none;
   background: #bd0f18;
   color: #f0f0f0;
 }
 
-.box:hover .edit {
+.box:hover .edit, .box2:hover .edit2, .box3:hover .edit3, .box4:hover .edit4, .box5:hover .edit5, .box6:hover .edit6, .box7:hover .edit7, .box8:hover .edit8 {
   opacity: 1;
 }
