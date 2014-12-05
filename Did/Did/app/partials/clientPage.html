@@ -4,10 +4,10 @@
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
   <meta charset="utf-8">
   <title>Smart Deals Layout Tool</title>
-<link rel="stylesheet" type="text/css" href="../css/main.css">
-<link rel="stylesheet" type="text/css" href="../css/style.css">
-<link rel="stylesheet" type="text/css" href="../css/clientPage.css">
-<link rel="stylesheet" type="text/css" href="../css/editable-content.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/clientPage.css">
+<link rel="stylesheet" type="text/css" href="css/editable-content.css">
 </head>
 
 <body>
@@ -18,21 +18,21 @@
       <img src="{{client.clientlogo}}" class="clientLogo">
   	</div>
     <div class="anchorContain">
-    	<div class="anchor"><a href="#clientInfo" class="jumpTag">Client Information<a></div>
-        <div class="anchor"><a href="#siteLink" class="jumpTag">Site Links</a></div>
-        <div class="anchor"><a href="#apiInfo" class="jumpTag">API/Tracking Information</a></div>
-        <div class="anchor"><a href="#compatibilityInfo" class="jumpTag">Compatibility Information</a></div>
-        <div class="anchor"><a href="#addOnInfo" class="jumpTag">Site Add-Ons</a></div>
-        <div class="anchor"><a href="#clientFeatures" class="jumpTag">Client Features</a></div>
-        <div class="anchor"><a href="#opInfo" class="jumpTag">Operational Information</a></div>
-        <div class="anchor"><a href="#devInfo" class="jumpTag">Development Information</a></div>
+    	<div class="anchor"><a href id="clientinfo" class="jumpTag">Client Information<a></div>
+        <div class="anchor"><a href id="sitelinks" class="jumpTag">Site Links</a></div>
+        <div class="anchor"><a href id="apitrackinginfo" class="jumpTag">API/Tracking Information</a></div>
+        <div class="anchor"><a href id="compatibilityinfo" class="jumpTag">Compatibility Information</a></div>
+        <div class="anchor"><a href id="siteaddons" class="jumpTag">Site Add-Ons</a></div>
+        <div class="anchor"><a href id="clientfeatures" class="jumpTag">Client Features</a></div>
+        <div class="anchor"><a href id="operationalinfo" class="jumpTag">Operational Information</a></div>
+        <div class="anchor"><a href id="developmentinfo" class="jumpTag">Development Information</a></div>
     </div>
   <div class="podContainer">
       <div class="pod1 box">
       	<span class="edit">edit</span>
 		<span class="save">save</span>
       	<div><a href="#toTop" class="jumpTag jumpToTop"></a></div>
-        <h3 class="podTitle"><a name="clientInfo" class="jumpTag">Client Information</a></h3>
+        <h3 class="podTitle" id="clientInfoP"><a name="clientInfo" class="jumpTag">Client Information</a></h3>
             <div class="information">
                 <h4>Client Colors:</h4>
                 <div class="response text">{{client.clientcolors}}</div>
@@ -155,7 +155,7 @@
             </div>
             <div class="information">
                 <h4>Facebook DCSID</h4>
-                <div class="response text">{{client.dcsid}}</div>
+                <div class="response text text">{{client.dcsid}}</div>
             </div>
             <div class="information no">
                 <h4>French</h4>

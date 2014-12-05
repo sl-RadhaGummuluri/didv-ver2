@@ -46,9 +46,8 @@ app.controller('PageCtrl', function (/* $scope, $location, $http */) {
   })
 });
 
-app.controller('ClientCtrl', function ($scope, $location, $http, $routeParams) {
+app.controller('ClientCtrl', function ($scope, $location, $http, $routeParams, $anchorScroll) {
 
-    console.log('in here');
     var id = $routeParams.id;
     var req = {
         method: 'GET',
@@ -63,6 +62,64 @@ app.controller('ClientCtrl', function ($scope, $location, $http, $routeParams) {
         $scope.client = data[id - 1];
     }).error(function (data, status, headers, config) {
     });
+
+
+    $("#clientinfo").click(function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $(".pod1").offset().top
+        }, 1000);
+    });
+
+    $("#sitelinks").click(function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $(".pod2").offset().top
+        }, 1000);
+    });
+
+    $("#apitrackinginfo").click(function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $(".pod3").offset().top
+        }, 1000);
+    });
+
+    $("#compatibilityinfo").click(function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $(".pod4").offset().top
+        }, 1000);
+    });
+
+    $("#siteaddons").click(function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $(".pod5").offset().top
+        }, 1000);
+    });
+
+    $("#clientfeatures").click(function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $(".pod6").offset().top
+        }, 1000);
+    });
+
+    $("#operationalinfo").click(function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $(".pod7").offset().top
+        }, 1000);
+    });
+
+    $("#developmentinfo").click(function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $(".pod8").offset().top
+        }, 1000);
+    });
+
 });
 
 
