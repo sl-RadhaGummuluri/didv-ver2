@@ -11,12 +11,13 @@
 </head>
 
 <body>
-<div class="container">
-	<div class="titleContain">
+<div class="titleContain">
       <div class="back"><span class="backChevron"></span><a class="backBtn" href="http://gdl-l-gummuluri.us.ad.gannett.com/app">Back</a></div>
       <h2 class="clientTitle"><a name="toTop" class="jumpTag">{{client.client}}</a></h2>
-      <img src="{{client.clientlogo}}" class="clientLogo">
-  	</div>
+      <img src="{{client.clientlogo}}" ng-if="!client.clientlogo == ''" class="clientLogo">
+</div>
+
+<div class="container">
     <div class="anchorContain">
     	<div class="anchor"><a href id="clientinfo" class="jumpTag">Client Information<a></div>
         <div class="anchor"><a href id="sitelinks" class="jumpTag">Site Links</a></div>
@@ -155,7 +156,7 @@
             </div>
             <div class="information">
                 <h4>Facebook URL</h4>
-                <div class="response text">{{client.facebooksiteurl}}</div>
+                <div class="response text"><a class="ellipsis" href="{{client.facebooksiteurl}}" target="_blank">{{client.facebooksiteurl}}</a></div>
             </div>
             <div class="information">
                 <h4>Facebook Site ID</h4>
@@ -171,7 +172,7 @@
             </div>
             <div class="information">
                 <h4>French URL</h4>
-                <div class="response text">{{client.frenchurl}}</div>
+                 <div class="response text">{{client.frenchurl}}</div>
             </div>
             <div class="information">
                 <h4>Sneak Peek</h4>

@@ -16,18 +16,18 @@ position:relative;
 }
 
 .edit, .save, .edit2, .save2, .edit3, .save3, .edit4, .save4, .edit5, .save5, .edit6, .save6, .edit7, .save7, .edit8, .save8 {
-  width: 50px;
-  display: block;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  padding: 4px 10px;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 0;
-  text-align: center;
-  cursor: pointer;
+    width: 50px;
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 40%;
+    padding: 2px 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 0;
+    text-align: center;
+    cursor: pointer;
 }
 
 .edit, .edit2, .edit3, .edit4, .edit5, .edit6, .edit7, .edit8 { 
