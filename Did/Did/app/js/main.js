@@ -202,6 +202,9 @@ app.controller('EntryCtrl', function ($scope, $location, $http, $routeParams) {
         $scope.apiversion = false;
         $scope.csdname = false;
         $scope.other = false;
+        $scope.selectYNValue = "default";
+        $scope.selectCsdNameValue = "default";
+        $scope.selectApiVersionValue = "default";
 
         if ($scope.selectFeatureValue > 3)
             $scope.other = true;
@@ -214,18 +217,102 @@ app.controller('EntryCtrl', function ($scope, $location, $http, $routeParams) {
     }
 
     $scope.selectYN = function () {
+        $scope.filterClients = [];
+
+        //mobileoptimized
+        if ($scope.selectFeatureValue == 4) {
+            $scope.selectYNValue
+            for (i = 0; i < $scope.clients.length - 1; i++) {
+                var client = $scope.clients[i];
+                if (client.mobileoptimized == $scope.selectYNValue) {
+                    $scope.filterClients.push(client);
+                }
+            }
+        }
+
+        //tabletoptimized
+
+        if ($scope.selectFeatureValue == 5) {
+            $scope.selectYNValue
+            for (i = 0; i < $scope.clients.length - 1; i++) {
+                var client = $scope.clients[i];
+                if (client.tabletoptimized == $scope.selectYNValue) {
+                    $scope.filterClients.push(client);
+                }
+            }
+        }
+
+        //spanish
+
+        if ($scope.selectFeatureValue == 6) {
+            $scope.selectYNValue
+            for (i = 0; i < $scope.clients.length - 1; i++) {
+                var client = $scope.clients[i];
+                if (client.spanish == $scope.selectYNValue) {
+                    $scope.filterClients.push(client);
+                }
+            }
+        }
+
+        //french
+
+        if ($scope.selectFeatureValue == 7) {
+            $scope.selectYNValue
+            for (i = 0; i < $scope.clients.length - 1; i++) {
+                var client = $scope.clients[i];
+                if (client.spanish == $scope.selectYNValue) {
+                    $scope.filterClients.push(client);
+                }
+            }
+        }
+
+        //sneakpeek
+
+        if ($scope.selectFeatureValue == 8) {
+            $scope.selectYNValue
+            for (i = 0; i < $scope.clients.length - 1; i++) {
+                var client = $scope.clients[i];
+                if (client.spanish == $scope.selectYNValue) {
+                    $scope.filterClients.push(client);
+                }
+            }
+        }
+
+        //facebook
+
+        if ($scope.selectFeatureValue == 9) {
+            $scope.selectYNValue
+            for (i = 0; i < $scope.clients.length - 1; i++) {
+                var client = $scope.clients[i];
+                if (client.spanish == $scope.selectYNValue) {
+                    $scope.filterClients.push(client);
+                }
+            }
+        }
+
+        //dynamic pages
+
+        if ($scope.selectFeatureValue == 10) {
+            $scope.selectYNValue
+            for (i = 0; i < $scope.clients.length - 1; i++) {
+                var client = $scope.clients[i];
+                if (client.spanish == $scope.selectYNValue) {
+                    $scope.filterClients.push(client);
+                }
+            }
+        }
+
+        //googlemaps
         if ($scope.selectFeatureValue == 11) {
             $scope.selectYNValue
-
-            $scope.filterClients = [];
             for (i = 0; i < $scope.clients.length - 1; i++) {
                 var client = $scope.clients[i];
                 if (client.googlemaps == $scope.selectYNValue) {
                     $scope.filterClients.push(client);
                 }
             }
-
         }
+
     }
 
     $scope.go = function () {
