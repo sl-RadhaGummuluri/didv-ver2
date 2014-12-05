@@ -72,7 +72,21 @@ app.controller('EntryCtrl',	function ($scope, $location, $http) {
 
 
 	$scope.selectClient = function(){
-		return $scope.selectedvalue = $scope.selectedChoice;
+	    $scope.selectedvalue = $scope.selectedChoice;
+
+	    var req = {
+	        method: 'GET',
+	        url: 'http://localhost/api/clients',
+	        headers: {
+	            'Content-Type': 'application/json'
+	        }
+	    }
+
+	    $http(req).success(function (data, status, headers, config) {
+	        var t = data;
+	    }).error(function (data, status, headers, config) {
+	    });
+
 	};
 
 	$scope.selectPlatform = function(){
@@ -113,6 +127,21 @@ app.controller('EntryCtrl',	function ($scope, $location, $http) {
 
 	$scope.selectYN= function(){
 		
+	}
+
+	$scope.go = function () {
+	    var req = {
+	        method: 'GET',
+	        url: 'http://localhost/api/clients',
+	        headers: {
+	            'Content-Type': 'application/json'
+	        }
+	    }
+
+	    $http(req).success(function (data, status, headers, config) {
+	        var t = data;
+	    }).error(function (data, status, headers, config) {
+	    });
 	}
 
 });  

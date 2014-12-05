@@ -36,3 +36,41 @@ c:\Users\rgummuluri\Documents\Visual Studio 2010\Projects\Did\Did\bin\System.Web
 c:\Users\rgummuluri\Documents\Visual Studio 2010\Projects\Did\Did\bin\System.Web.Http.WebHost.xml
 c:\Users\rgummuluri\Documents\Visual Studio 2010\Projects\Did\Did\obj\Debug\Did.dll
 c:\Users\rgummuluri\Documents\Visual Studio 2010\Projects\Did\Did\obj\Debug\Did.pdb
+C:\Git\didv-ver2\Did\Did\bin\Did.dll
+C:\Git\didv-ver2\Did\Did\bin\Did.pdb
+C:\Git\didv-ver2\Did\Did\bin\EntityDataModel.dll
+C:\Git\didv-ver2\Did\Did\bin\EntityFramework.dll
+C:\Git\didv-ver2\Did\Did\bin\Microsoft.ApplicationServer.Http.dll
+C:\Git\didv-ver2\Did\Did\bin\Microsoft.ApplicationServer.HttpEnhancements.dll
+C:\Git\didv-ver2\Did\Did\bin\Microsoft.Data.Spatial.dll
+C:\Git\didv-ver2\Did\Did\bin\Microsoft.Json.dll
+C:\Git\didv-ver2\Did\Did\bin\Microsoft.Net.Http.Formatting.dll
+C:\Git\didv-ver2\Did\Did\bin\Microsoft.Net.Http.Formatting.OData.dll
+C:\Git\didv-ver2\Did\Did\bin\Microsoft.Runtime.Serialization.Internal.dll
+C:\Git\didv-ver2\Did\Did\bin\Microsoft.Server.Common.dll
+C:\Git\didv-ver2\Did\Did\bin\Microsoft.ServiceModel.Internal.dll
+C:\Git\didv-ver2\Did\Did\bin\Microsoft.Web.Infrastructure.dll
+C:\Git\didv-ver2\Did\Did\bin\MongoDB.Bson.dll
+C:\Git\didv-ver2\Did\Did\bin\MongoDB.Driver.dll
+C:\Git\didv-ver2\Did\Did\bin\Newtonsoft.Json.dll
+C:\Git\didv-ver2\Did\Did\bin\System.Data.OData.dll
+C:\Git\didv-ver2\Did\Did\bin\System.Net.Http.dll
+C:\Git\didv-ver2\Did\Did\bin\System.Net.Http.Formatting.dll
+C:\Git\didv-ver2\Did\Did\bin\System.Net.Http.WebRequest.dll
+C:\Git\didv-ver2\Did\Did\bin\System.Web.Http.dll
+C:\Git\didv-ver2\Did\Did\bin\System.Web.Http.WebHost.dll
+C:\Git\didv-ver2\Did\Did\bin\EntityFramework.xml
+C:\Git\didv-ver2\Did\Did\bin\Microsoft.ApplicationServer.Http.xml
+C:\Git\didv-ver2\Did\Did\bin\Microsoft.Json.xml
+C:\Git\didv-ver2\Did\Did\bin\Microsoft.Net.Http.Formatting.xml
+C:\Git\didv-ver2\Did\Did\bin\Microsoft.Net.Http.Formatting.OData.xml
+C:\Git\didv-ver2\Did\Did\bin\MongoDB.Bson.xml
+C:\Git\didv-ver2\Did\Did\bin\MongoDB.Driver.xml
+C:\Git\didv-ver2\Did\Did\bin\Newtonsoft.Json.xml
+C:\Git\didv-ver2\Did\Did\bin\System.Net.Http.xml
+C:\Git\didv-ver2\Did\Did\bin\System.Net.Http.Formatting.xml
+C:\Git\didv-ver2\Did\Did\bin\System.Net.Http.WebRequest.xml
+C:\Git\didv-ver2\Did\Did\bin\System.Web.Http.xml
+C:\Git\didv-ver2\Did\Did\bin\System.Web.Http.WebHost.xml
+C:\Git\didv-ver2\Did\Did\obj\Debug\Did.dll
+C:\Git\didv-ver2\Did\Did\obj\Debug\Did.pdb
