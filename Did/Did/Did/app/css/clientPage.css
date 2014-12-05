@@ -1,0 +1,164 @@
+.container {background:#c8c8c8;
+	position: relative;
+	max-width: 1280px;
+	width: auto;
+	margin: 0 auto;
+	padding: 0;
+	padding-top:12px;
+}
+.clientTitle {
+		font-size:36px;
+		font-weight:bold;
+		float:none;
+		position:relative;
+		top:0;
+		margin-left:0;
+		text-align:center;
+		margin-bottom:10px;
+}
+.clientLogo {
+		margin:0 auto;
+		float:none;
+		display:block;
+		margin-bottom:5px;
+		width:40%;
+		height:auto;
+}
+.ellipsis {overflow:hidden;
+	text-overflow:ellipsis;
+	width:90%;
+	white-space:nowrap;
+}
+.titleContain {
+		margin-bottom:10px;
+		height:auto;
+}
+.podContainer {clear: both;
+	position: relative;
+	margin: 0 auto;
+	width:1000px;
+	padding-bottom: 10px;
+}
+.pod1, .pod2, .pod3, .pod4, .pod5, .pod6, .pod7, .pod8 {float: left;
+	position: relative;
+	background-color: #fff;
+	margin: 1%;
+	width: 27%;
+	padding: 20px;
+	height: 1020px;
+	font-size: 14px;
+	border-radius:8px;
+}
+.podTitle {font-weight:bold;
+	font-size:20px;
+	margin-bottom:20px;
+	width:80%;
+}
+.information {border-bottom:#cecece solid 1px;
+	border-top:#cecece solid 1px;
+	padding:10px 0;
+	margin-bottom:15px;
+}
+h4 {font-weight:bold;
+	margin-bottom:3px;
+}
+.response {width:99%;
+	overflow:hidden;
+	text-overflow:ellipsis;
+
+}
+.anchorContain {margin:10px auto 10px auto;
+	width:1000px;
+}
+.anchor {background:white;
+	border-radius:8px;
+	float:left;
+	padding:10px;
+	margin:0 5px;
+	text-align:center;
+	margin-bottom:10px;
+}
+.jumpTag {text-decoration:none;
+color:black;
+}
+.jumpToTop {border-style: solid;
+border-width: 3px 3px 0 0;
+content: '';
+display: inline-block;
+height: 10px;
+position: absolute;
+transform: rotate(-45deg);
+-ms-transform: rotate(-45deg);
+-moz-transform: rotate(-45deg);
+-webkit-transform: rotate(-45deg);
+-o-transform: rotate(-45deg);
+vertical-align: top;
+width: 10px;
+color: #000;
+right: 40px;
+top: 33px;
+}
+
+@media only screen and (max-width : 1024px) {
+	.podContainer {clear: both;
+		position: relative;
+		margin: 0 auto;
+		width:90%;
+		padding-bottom: 10px;
+	}
+	.pod1, .pod2, .pod3, .pod4, .pod5, .pod6, .pod7, .pod8 {
+		position: relative;
+		width: 42%;
+	}
+	.anchorContain {margin:10px auto 10px auto;
+		width:92%;
+	}
+	
+}
+
+@media only screen and (max-width : 767px) {
+	.pod1, .pod2, .pod3, .pod4, .pod5, .pod6, .pod7, .pod8 {float: none;
+		position: relative;
+		width: 86%;
+		height:auto;
+		margin-bottom:15px;
+	}
+	.clientTitle {
+		font-size:36px;
+		font-weight:bold;
+		float:none;
+		position:relative;
+		top:0;
+		margin-left:0;
+		text-align:center;
+		margin-bottom:10px;
+	}
+	.clientLogo {
+		height: auto;
+		width: 200px;
+		margin:0 auto;
+		float:none;
+		display:block;
+		margin-bottom:5px;
+	}
+	.titleContain {
+		margin-bottom:10px;
+		height:auto;
+	}
+	.anchorContain {width:86%;
+		margin:0 auto;
+	}
+	.anchor {width:42%;
+	}
+	
+}
+@media only screen and (max-width : 484px) {
+	.anchorContain {width:86%;
+		margin:0 auto;
+	}
+	.anchor {width:90%;
+	}
+	
+}
+
+

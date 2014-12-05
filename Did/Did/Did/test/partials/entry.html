@@ -1,0 +1,86 @@
+<p>
+	Client: 
+	<select id="selectClient" name="selectClient" ng-change="selectClient()" ng-model="selectedClientValue">
+	  <option value="default"></option>
+	  <option value="NewsAmerica">NewsAmerica/SmartSource</option> 	  
+	  <option value="Walgreens">Walgreens</option> 
+	  <option value="HomeDepot">Home Depot</option>
+	</select>
+
+	<div id="goClient" ng-click="go(1)">Go</div>
+
+</p>
+
+
+<!--<br/>Client: <input type="text" id="clientName">
+	<div id='clientSuggestions'></div>
+-->
+
+<p>
+	Features: 
+	<select id="selectFeature" name="selectFeature" ng-change="selectFeature()" ng-model="selectFeatureValue">
+		<option value="default"></option>
+		<option value="1">API Version in Use</option>
+		<option value="2">Platform Usage</option>
+		<option value="3">CSD Name</option> 
+		<option value="4">Mobile Optimized</option>
+		<option value="5">Tablet Optimized</option>
+		<option value="6">Spanish</option>
+		<option value="7">French</option>
+		<option value="8">Sneak Peek</option>
+		<option value="9">Facebook</option>
+		<option value="10">Dynamic Pages</option>
+		<option value="11">Google Maps</option>
+	</select>
+</p>
+
+<div ng-show="platform">
+	Platform: 
+	<select id="selectPlatform" name="selectPlatform" ng-change="selectPlatform()" ng-model="selectPlatformValue">
+		<option value="default"></option>
+		<option value="1">APIOnly</option>
+		<option value="2">MVC</option> 
+		<option value="3">MVC-Catalog</option> 
+		<option value="4">MVC-Coupon</option> 
+		<option value="5">SC2-Custom</option>
+		<option value="6">SC2-HTML</option>
+		<option value="7">SC4-Flash</option>
+		<option value="8">SC4/SC2</option>
+		<option value="9">SC Standard</option>
+		<option value="10">SmartCatalog (HTML)</option>
+		<option value="11">SmartDeals</option>
+	</select>
+	<div id="goPlatform" ng-click="go(2)">Go</div>
+</div>
+
+<div ng-show="apiversion">
+	Api Version: 
+	<select id="selectApiVersion" name="selectApiVersion" ng-change="selectApiVersion()" ng-model="selectApiVersionValue">
+		<option value="default"></option> 	
+		<option value="1">2013.1</option> 
+		<option value="2">2012.2</option>
+		<option value="3">2012.1</option>
+		<option value="4">scapi</option>
+	</select>
+	<div id="goApiVersion" ng-click="go(3)">Go</div>
+</div>
+
+<div ng-show="csdname">
+	CSD Name: 
+	<select id="selectCsdName" name="selectCsdName" ng-change="selectCsdName()" ng-model="selectCsdNameValue">
+	  	<option value="default"></option> 	
+	  	<option value="1">Anna Dundun</option> 
+	  	<option value="2">Chris Stone</option>
+		<option value="3">Lance Thomas</option>
+	</select>
+	<div id="goCSD" ng-click="go(4)">Go</div>
+</div>
+
+<div ng-show="other">
+	<select id="selectYN" name="selectYN" ng-change="selectYN()" ng-model="selectYNValue">
+	  	<option value="default"></option> 	
+	  	<option value="Y">Yes</option> 
+	  	<option value="N">No</option>
+	</select>
+	<div id="goCSD" ng-click="go(5)">Go</div>
+</div>

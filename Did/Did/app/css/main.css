@@ -1,0 +1,337 @@
+/* 
+Custom CSS for...
+'Modern Business' HTML Theme by Start Bootstrap
+
+All Start Bootstrap themes are licensed under Apache 2.0. 
+For more info and more free Bootstrap 3 HTML themes, visit http://startbootstrap.com!
+*/
+
+/* Global Styles */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.dropdown {
+    cursor:pointer;
+}
+
+
+.img-home-portfolio,
+.img-customer,
+.portfolio-item {
+    margin-bottom: 30px;
+}
+
+.tab-pane {
+    margin-top: 15px;
+}
+
+/* Page Sections */
+.section,
+.section-colored {
+    padding: 50px 0;
+}
+
+.section-colored {
+    background-color: #e1e1e1;
+    /* change this to change the background color of a colored section */
+}
+
+.sidebar {
+    margin-top: 40px;
+}
+
+.sidebar ul {
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #cccccc;
+}
+
+/* Half Page Height Carousel Customization */
+.carousel {
+    height: 50%;
+}
+
+.item,
+.active,
+.carousel-inner {
+    height: 100%;
+}
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Social Icons Styles */
+.list-social-icons {
+    margin-bottom: 45px;
+}
+
+.tooltip-social a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.facebook-link a:hover {
+    color: #3b5998;
+}
+
+.linkedin-link a:hover {
+    color: #007fb1;
+}
+
+.twitter-link a:hover {
+    color: #39a9e0;
+}
+
+.google-plus-link a:hover {
+    color: #d14836;
+}
+
+/* Service Page Styles */
+.service-icon {
+    font-size: 50px;
+}
+
+/* 404 Page Styles */
+.error-404 {
+    font-size: 8em;
+}
+
+/* Pricing Page Styles */
+.price {
+    font-size: 4em;
+}
+
+.price-cents {
+    vertical-align: super;
+    font-size: 50%;
+}
+
+.price-month {
+    font-size: 35%;
+    font-style: italic;
+}
+
+/* Footer Styles */
+footer {
+    margin: 50px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+
+    .carousel {
+        height: 70%;
+        /* increases the carousel height so it looks good on phones */
+    }
+}
+
+body
+{
+    font-family: 'Open Sans' , sans-serif;
+    color: #000000;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 50px; /* breathing room at the bottom */
+    font-size: 16px;
+    line-height: 1.375;
+    background: #c8c8c8
+}
+.header
+{
+    width: 100%;
+    height: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #f3f3f3;
+    padding-top: 20px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #c1bcbc;
+    border-top: 1px solid #c1bcbc;
+}
+.main{
+
+    text-align: center;
+    font-weight: normal;
+    font-size: 30px;
+    font-weight: bold;
+    color: #093a5b;
+    margin-top: 15px;
+  
+}
+#logo
+{
+    float: left;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+.header_top
+{
+    width:100%;
+    height: 50px;
+    background: #347fb2;
+    margin-right: 0 auto;
+    margin-left: auto;
+    background-color: #347fb2;
+    display: block;
+
+}
+.form
+{
+    margin: 30px;
+    background-color: #fff;
+
+    
+}
+.container{
+    
+    width: 100%;
+    margin-top: 50px;
+
+}
+.line{
+
+    height: 10px;
+    border-bottom: 1px solid #c1bcbc;
+
+}
+.formTittle{
+
+    font-family: 'Open Sans' , sans-serif;
+    color: #000000;
+    height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.375;
+    padding: 0 0 10px 0;
+    width: 200px;
+
+
+}
+.text{
+
+    font-family: 'Open Sans' , sans-serif;
+    color: #000000;
+    font-size: 20px;
+    line-height: 1.375;
+    color: red;
+}
+#selectClient{
+
+
+    width: 100%;
+    height: 40px;
+
+}
+#selectFeature{
+
+
+    width: 100%;
+    height: 40px;
+
+}
+#selectPlatform{
+
+    width: 100%;
+    height: 40px;
+}
+#selectApiVersion{
+
+    width: 100%;
+    height: 40px;
+
+}
+#selectCsdName{
+
+    width: 100%;
+    height: 40px;
+
+}
+#selectYN{
+
+    width: 100%;
+    height: 40px;
+
+}
+.list{
+
+    margin: 30px;
+    list-style: none;
+    font-family: 'Open Sans' , sans-serif;
+    color: #000000;
+    font-size: 16px;
+    line-height: 1.375;
+
+}
+.wrapper{
+
+    padding: 10px 0;
+    background:#fff;
+    width: 90%;
+    margin:10px auto;
+    border-radius:8px;
+   
+}
+.headline{
+
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 20px;
+
+
+}
+
+@media screen and (min-width: 720px){
+
+    .form{
+
+     margin: 50px auto;
+     width:80% 
+        
+    }
+    .line{
+
+        width: 50%;
+        margin: 0 auto;
+
+    }
+    .list{
+
+     margin: 20px auto;
+     width: 100%;
+
+        
+    }
+   .wrapper{
+
+    background:#fff;
+    width: 35%;
+    margin:20px auto;
+    border-radius:8px;
+    padding: 30px;
+  
+}
+
+}
+@media screen and (max-width: 320px){
+
+.list{
+
+     font-size: 16px; 
+
+        
+    }
+
+
+
+}
