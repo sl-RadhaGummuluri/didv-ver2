@@ -177,6 +177,13 @@ body
 }
 
 }
+
+@media only screen and (max-width : 484px) {
+	.header {height:120px;
+}
+	
+}
+
 @media screen and (max-width: 320px){
 
 .list{
@@ -187,5 +194,5 @@ body
     }
 
 
-
 }
+
